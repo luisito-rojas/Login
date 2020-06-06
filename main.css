@@ -1,0 +1,184 @@
+/*Aplicamos un selector a todo que lo que hace es combinar todos los espaciados el padding, el margin y tratar de que no se alteren sino que se adapten al mismo tamaño*/
+*{
+    box-sizing: border-box;
+}
+
+body { 
+    /*le vamos a cambiar el fondo*/
+    background:#181818;
+    /*Le vamos a cambiar el color de la letra*/
+    color: #fff;
+    /*Le vamos a cambiar el stilo de la fuente*/
+    font-family: 'Quicksand', sans-serif;
+    /*Vamos a colocar un relleno para todo el espaciado del cuerpo del html(las letras se van para adentro)
+    de arriba y abajo le vamos a dar 0 y a los lados de 1.5*/
+    padding:0 1.5em ;
+}
+.content{
+    /*Establecemos su ancho maximo*/
+    max-width: 1170px;
+    /*Establecemos su margen izquierdo*/
+    margin-left: auto;
+    /*Establecemos su margen derecho*/
+    margin-right: auto;
+    /*Establecemos su relleno arriba y abajo y a los lados de*/
+    padding: 1.5em;
+}
+
+.logo{
+    /*Lo establecemos al centro*/
+    text-align: center;
+    /*Le cambiamos el tamaño dla fuente*/
+    font-size: 3em;
+}
+.logo span{
+    color: #b70b21;
+}
+.contact-wrapper{
+    /*Vamos a hacer un recuadro para la primera mitad va a ser sombreado de blanco lo definimos con el rgba*/
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .5); 
+}
+/*Le decimos que a todos los elementos del contact wrapper vamos a añadirle un padding con esto todos los elementos se despegan de la orilla*/
+.contact-wrapper >*{
+    padding: 1em;
+
+}
+
+.contact-form{
+    background: #222222;
+}
+/*Aqui es donde fraccionamos la pantalla*/
+.contact-form form{
+    /*Esta clase display espara decirle como voy a dividir los elementos*/
+    display: grid;
+    /*Aqui agregamos una clase  grid-template-columns y le decimos en cuantas columnas queremos dividirlo para eso le llamamos fracciones o fr */
+    grid-template-columns: 1fr 1fr;
+}
+.contact-form form .block{
+    /*Esta clase lo que hara es abarcar todo el ancho desde las columnas que esta dividiendo*/
+    grid-column: 1 / 3;
+}
+
+.contact-form form p{
+    /*le ponemos un margen para todods los lados de 0 y un padding de 1em en donde estan los formularios*/
+    margin: 0;
+    padding: 1em;
+}
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea{
+    /*Los campos donde tenemos que llenar hacemos que abarquen el 100% del espacio*/
+    width: 100%;
+    /*Hacemos mas anchos los campos de llenado*/
+    padding: .7em;
+    /*Le quitamos los bordes*/
+    border: none;
+    /*Le quitamos el color de fondo a los campos de llenado(por defecto eran blancos)*/
+    background: none;
+    /*cuando haciamos click sobre el espacio se dibujaba el campo de llenado con una linea blanca delgada,con esto la eliminamos*/
+    outline: 0;
+    /*CCambiamos el color de la letra que era blanca y se la cambiamos a blanca*/
+    color: #fff;
+    /*Con esto le dibujamos una delgada linea roja para que se escriba sobre de ella eliminando por completo los recuadros de texto*/
+    border-bottom: 1px solid #d63031;
+}
+
+/*Ahora vamos a estilizar el boton que esta dentro de nuestro formulario*/
+.contact-form form button{
+    background: #b70b21;
+    /*el color del texto el boton se la cambiamos a negro*/
+    color: #000;
+    /*Le quitamos los bordes*/
+    border: 0;
+    /*Convertimos el texto que tenga el boton a mayusculas*/
+    text-transform: uppercase;
+    /*Hacemos mas ancho el boton*/
+    padding: 1em;
+    
+}
+/*para el boton seleccionamos unas subclases hover y focus lo que hacen es que cuando le pasamos el cursor cambia de color*/
+.contact-form form button:hover,
+.contact-form form button:focus{
+    /*el fondo cambia de color*/
+    background: #d63031;
+    /*La letra va a cambiar de color*/
+    color: #fff;
+    /*Esto es para que no nos haga un cambio tan repentino y se tarde un segundo en cambiar de color*/
+    transition: background-color 1s ease-in-out;
+    /*En este caso, se utiliza para establecer el mismo grosor, estilo y/o anchura de todos los perfiles de un elemento*/
+    outline: none;
+
+}
+.icons{
+    color: #fff;
+    text-align: center;
+    margin: 10px 5px;
+}
+
+
+/*Vamos a ponerle un fondo de otro color a la otra parte del formulario*/
+.contact-info{
+    /*Le cambiamos el color de fondo*/
+    background: #000;
+    
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+    /*todos estos elementos los vamos a alinear*/
+    text-align: center;
+    /*se separan hacia abajo los elementos*/
+    margin: 0 0 1rem 0;
+}
+.contact-info ul{
+    /*con esto borramos los puntos negros de las listas*/
+    list-style:none ;
+    /*Es la separacion que debe de haber entre el ul y los li */
+    padding: 0px;
+}
+.contact-info ul li{
+    /*Es la distancia que le vamos a dejar entre los li */
+    padding: .3em;
+}
+
+.links  i {
+    padding: 1em;
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+/*Large  Screen, esto es para cuando ocupemos un ancho minimo de 700px*/
+@media(min-width: 700px){
+    body{
+        /*Esto es para un espaciado mas grande 0 a los lados  y 4 arriba y abajo*/
+        padding: 0 4rem;
+    }
+    /*Vamos a cambiar el tamaño del formulario,vamos a utilizar css grid para divirlo en 2 partes*/
+    .contact-wrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+    }
+    .contact-wrapper >*{
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p{
+        padding: 1em;
+        text-align: left;
+    }
+    /*Aqui le vamos a poner un argen de 0 arriba y abajo, y 30 hacia los lados*/
+    .links  i {
+        padding: .2em;
+        margin: 0 5px;
+}
+
+}

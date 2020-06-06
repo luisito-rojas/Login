@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--Animate.css-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+     >
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet"
+    />
+    <!--enlace de font awesome cdnjs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Enlace para mi CSS-->
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <!--Como vamos a tratar de colocar  un elemento que este centrado que tenga un espaciado y todo eso, vamos a crear un contenedor que se llamara "content" para especificar que ahi adentro va el contenido principal -->
+    <div class="content">
+        <!--Colocamos un h1 que sera el logotipo de nuestro sitio web y hacemos un span encerrando la palabra "Us" por que vamos a manipular aparte esta palabra-->
+        
+        <h1 class="logo">LA <span>Red</span> </h1>
+      
+        <!--Creamos otro contenedor donde estara todo nuestro formulario, recordar que esta dividido en dos partes-->
+        <div class="contact-wrapper">
+            <!--Hacemos otro contenedor para la seccion formulario del contacto -->
+            <div class="contact-form">
+                <h3>Contactanos</h3>
+                <form action="">
+                    <!--Creamos las etiquetas del contenedor -->
+                    <p>
+                        <!--primera etiqueta-->
+                        <label for="Nombre Completo"> Nombre Completo</label >
+                        <!--El atributo FOR nos sirven para cuando nosotros le damos click al texto automaticamente nos acomoda el el area que tenemos que llenar-->
+                        <input type="text" name="fullname" id="fullname">
+                    </p>
+                    <p>
+                        <!--segunda etiqueta-->
+                        <label for="email">Correo Electronico </label>
+                        <input type="text" name="email" id="email">
+                    </p>
+                    <p>
+                        <!--tercera etiqueta-->
+                        <label for="phone">Telefono </label>
+                        <input type="tel" name="phone" id="phone">
+                    </p>
+                    <p>
+                        <!--cuarta etiqueta-->
+                        <label for="affair">Asunto </label>
+                        <input type="text" name="affair" id="affair">
+                    </p>
+                    <p class="block">
+                        <!--quinta etiqueta- y le añadimos un TEXTAREA xq normalmente cuando escribimos ocupamos algo de espacio -->
+                        <label for="message">Mensaje </label>
+                        <textarea name="message" id="message" rows="3"></textarea>
+                    </p>
+                    <p class="block">
+                        <!--Finalmente agregamos un boton con un SUBMIT es decir cuando hagamos click en el boton se enviara el formulario y le ponemos un texto que dice ENVIAR-->
+                        <button type="submit">
+                            Enviar
+                        </button>
+
+                    </p>
+                </form>
+                
+            
+            </div>    
+                <!--Hacemos otro contenedor donde pondremos la informacion del contacto-->
+                <div class="contact-info">
+                    <h4>Mas Informacion</h4>
+                    <!--Vamos a hacer una lista desordenada por que vamos a añadir varios iconos-->
+                    <ul>
+                        <!--Sacamos los enlaces de font awesome para los logos-->
+                        <li><i class="fa fa-map-marker" aria-hidden="true"> Domicilio</i></li>
+                        <li><i class="fa fa-phone" aria-hidden="true">111-111-111-111</i></li>
+                        <li><i class="fa fa-envelope" aria-hidden="true">contacto@website.com</i></li>
+                    </ul>
+                    <!--Vamos a poner 1 etiqueta para agregar unas palabras -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dolorum culpa? Est consequatur id saepe fuga non reprehenderit nostrum earum.</p>
+                    <p class="follow"><strong>SIGUEME EN MIS REDES SOCIALES: </strong>  </p>
+                    
+                    
+                    <div class="links"> 
+                        <a href="#">
+                            <i class="fab fa-facebook" style="font-size:28px; color: white"></i>
+                        <a href="#">
+                            <i class="fa fa-github" style="font-size:28px; color: white"></i>
+                        <a href="#">
+                            <i class="fa fa-linkedin" style="font-size:28px; color: white"></i>
+                        <a href="#">
+                            <i class="fa fa-instagram" style="font-size:28px; color: white"></i>
+                            
+                            
+                    </div>   
+                    
+                        
+
+                    
+                </div>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>
